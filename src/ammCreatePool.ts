@@ -83,10 +83,9 @@ async function howToUse() {
   const baseToken = DEFAULT_TOKEN.TOKEN4 // USDC
   const quoteToken = DEFAULT_TOKEN.WSOL // RAY
   const targetMargetId = new PublicKey('5qcqkjE4iXTMrsgS7547HpRDvC84N9v6vWsrLP4QaBaM')
-  console.log('targetMargetId', targetMargetId.toBase58())
   const addBaseAmount = new BN(1000000) // 10000 / 10 ** 6,
   const addQuoteAmount = new BN(1000000000) // 10000 / 10 ** 6,
-  const startTime = Math.floor(Date.now() / 1000) + 60 * 60 * 24 // start from 7 days later
+  const startTime = Math.floor(Date.now() / 1000) + 60 * 60 * 24 // start from 7 days later  // When the pool should start swapping tokens
   const walletTokenAccounts = await getWalletTokenAccount(connection, wallet.publicKey)
   /* do something with start price if needed */
   const startPrice = calcMarketStartPrice({ addBaseAmount, addQuoteAmount })
