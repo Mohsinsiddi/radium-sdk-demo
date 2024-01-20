@@ -25,6 +25,7 @@ async function ammFetchPoolId(input: TestTxInputInfo): Promise<{ requirePoolData
   const data = await formatAmmKeys(PROGRAMIDS.AmmV4.toString())
   console.log('Data', data)
   const requirePoolData = data.filter((item) => item.marketId === input.marketId)
+  console.log('Required Pool Data', requirePoolData)
   return { requirePoolData }
 }
 
