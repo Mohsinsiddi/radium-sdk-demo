@@ -30,7 +30,9 @@ async function ammFetchPoolId(input: TestTxInputInfo): Promise<{ requirePoolData
 }
 
 async function howToUse() {
-  const marketId = '5qcqkjE4iXTMrsgS7547HpRDvC84N9v6vWsrLP4QaBaM'
+  //AM71PNfepUtEwxvxthsFwSXAFh1QNdK1o6jFmCD3sFUP //new
+  //5qcqkjE4iXTMrsgS7547HpRDvC84N9v6vWsrLP4QaBaM //old
+  const marketId = 'AM71PNfepUtEwxvxthsFwSXAFh1QNdK1o6jFmCD3sFUP'
   ammFetchPoolId({
     marketId,
   }).then(({ requirePoolData }) => {

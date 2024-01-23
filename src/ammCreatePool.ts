@@ -74,7 +74,6 @@ async function ammCreatePool(input: TestTxInputInfo): Promise<{ txids: string[] 
     makeTxVersion,
     feeDestinationId: new PublicKey('3XMrhbv989VxAMi3DErLV9eJht1pHppW5LbKxe9fkEFR'), // only mainnet use this
   })
-  console.log('Pool Id', initPoolInstructionResponse.address)
   return { txids: await buildAndSendTx(initPoolInstructionResponse.innerTransactions, { skipPreflight: true }) }
 }
 
@@ -82,7 +81,7 @@ async function howToUse() {
   console.log('Wallet pubkey', wallet.publicKey.toBase58())
   const baseToken = DEFAULT_TOKEN.TOKEN4 // USDC
   const quoteToken = DEFAULT_TOKEN.WSOL // RAY
-  const targetMargetId = new PublicKey('5qcqkjE4iXTMrsgS7547HpRDvC84N9v6vWsrLP4QaBaM')
+  const targetMargetId = new PublicKey('AM71PNfepUtEwxvxthsFwSXAFh1QNdK1o6jFmCD3sFUP')
   const addBaseAmount = new BN(1000000) // 10000 / 10 ** 6,
   const addQuoteAmount = new BN(1000000000) // 10000 / 10 ** 6,
   const startTime = Math.floor(Date.now() / 1000) + 60 * 60 * 24 // start from 7 days later  // When the pool should start swapping tokens

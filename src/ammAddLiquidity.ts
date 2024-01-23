@@ -67,14 +67,11 @@ async function ammAddLiquidity(
     fixedSide: 'a',
     makeTxVersion,
   })
+
   return {
-    txids: [''],
+    txids: await buildAndSendTx(addLiquidityInstructionResponse.innerTransactions, { skipPreflight: true }),
     anotherAmount,
   }
-  // return {
-  //   txids: await buildAndSendTx(addLiquidityInstructionResponse.innerTransactions, { skipPreflight: true }),
-  //   anotherAmount,
-  // }
 }
 
 async function howToUse() {

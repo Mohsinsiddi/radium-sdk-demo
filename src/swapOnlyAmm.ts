@@ -55,7 +55,7 @@ async function howToUse() {
   const inputToken = DEFAULT_TOKEN.TOKEN4 // USDC
   const outputToken = DEFAULT_TOKEN.WSOL // RAY
   const targetPool = 'EQXmTPq9MEZvZ8Apn2fKxP5XkPGVhKsQ7MNLtWrxdvJW' // USDC-RAY pool
-  const inputTokenAmount = new TokenAmount(inputToken, 100)
+  const inputTokenAmount = new TokenAmount(inputToken, 10000)
   const slippage = new Percent(1, 100)
   const walletTokenAccounts = await getWalletTokenAccount(connection, wallet.publicKey)
 

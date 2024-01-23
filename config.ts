@@ -8,6 +8,8 @@ import {
   Token,
   TOKEN_PROGRAM_ID,
   TxVersion,
+  NativeTokenInfo,
+  SOL,
 } from '@raydium-io/raydium-sdk'
 import { Connection, Keypair, PublicKey } from '@solana/web3.js'
 import bs58 from 'bs58'
@@ -30,7 +32,8 @@ export const makeTxVersion = TxVersion.V0 // LEGACY
 export const addLookupTableInfo = undefined // only mainnet. other = undefined
 
 export const DEFAULT_TOKEN = {
-  SOL: new Currency(9, 'USDC', 'USDC'),
+  SOL: SOL,
+  SOL1: new Currency(9, 'USDC', 'USDC'),
   WSOL: new Token(TOKEN_PROGRAM_ID, new PublicKey('So11111111111111111111111111111111111111112'), 9, 'WSOL', 'WSOL'),
   USDC: new Token(TOKEN_PROGRAM_ID, new PublicKey('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'), 6, 'USDC', 'USDC'),
   RAY: new Token(TOKEN_PROGRAM_ID, new PublicKey('4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R'), 6, 'RAY', 'RAY'),
